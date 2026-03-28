@@ -1,3 +1,8 @@
+## 🌐 Acesse o Dashboard Online
+
+https://fid-financial-dashboard.streamlit.app
+
+
 # 📊 FID - Financial Intelligence Dashboard
 
 Dashboard interativo desenvolvido com Streamlit para visualização e análise de dados financeiros.
