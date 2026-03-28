@@ -3,6 +3,10 @@ import pandas as pd
 
 st.title("📂 Importar lançamentos")
 
+if st.button("✨ Ver exemplo"):
+    import pandas as pd
+    st.session_state["df"] = pd.read_csv("data/dados.csv")
+
 uploaded_file = st.file_uploader(
     "Envie seu arquivo (CSV ou Excel)",
     type=["csv", "xlsx"]
