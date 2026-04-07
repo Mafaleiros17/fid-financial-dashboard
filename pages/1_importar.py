@@ -39,7 +39,7 @@ if st.button("✨ Ver exemplo"):
             "Pix","Cartão","Pix","Cartão","Boleto",
             "Pix","Cartão","Pix","Cartão","Boleto",
             "Pix","Cartão","Pix","Cartão","Boleto"
-        ]
+        ],
         "tipo":  [
             "Receita","Despesa","Despesa","Despesa","Despesa",
             "Receita","Despesa","Despesa","Despesa","Despesa",
@@ -47,8 +47,8 @@ if st.button("✨ Ver exemplo"):
             "Receita","Despesa","Despesa","Despesa","Despesa",
             "Receita","Despesa","Despesa","Despesa","Despesa",
             "Receita","Despesa","Despesa","Despesa","Despesa"
-    ],
-    }
+        ],
+        }
 
     df = pd.DataFrame(data)
 
