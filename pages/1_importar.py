@@ -31,6 +31,14 @@ if st.button("✨ Ver exemplo"):
             3500,-160,-95,-250,-900,
             3500,-140,-88,-210,-350,
             3500,-170,-92,-270,-900
+        ],
+        "canal": [
+            "Pix","Cartão","Pix","Cartão","Boleto",
+            "Pix","Cartão","Pix","Cartão","Boleto",
+            "Pix","Cartão","Pix","Cartão","Boleto",
+            "Pix","Cartão","Pix","Cartão","Boleto",
+            "Pix","Cartão","Pix","Cartão","Boleto",
+            "Pix","Cartão","Pix","Cartão","Boleto"
         ]
     }
 
@@ -82,6 +90,10 @@ if uploaded_file is not None:
         df["mes"] = df["data"].dt.month
         df["mes_nome"] = df["data"].dt.strftime("%B")
 
+        # se não tiver canal, cria (evita erro no dashboard)
+        if "canal" not in df.columns:
+            df["canal"] = "Não informado"
+
         st.session_state["df"] = df
 
         st.success("Arquivo importado com sucesso!")
@@ -91,7 +103,7 @@ if uploaded_file is not None:
 
 
 # =========================
-# PREVIEW (FUNCIONA PARA AMBOS)
+# PREVIEW
 # =========================
 if "df" in st.session_state:
     st.subheader("Pré-visualização")
